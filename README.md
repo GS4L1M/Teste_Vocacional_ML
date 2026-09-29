@@ -95,13 +95,18 @@ Teste_Vocacional_ML/
 │   ├── Dados originais/      # dados brutos, nunca alterados
 │   └── Dados processados/    # dados tratados, gerados pelos notebooks
 ├── docs/
-│   └── codebook_ptbr.md      # dicionário de dados traduzido
+│   ├── codebook_ptbr.md      # dicionário de dados traduzido
+│   └── diario.md             # registro das decisões do projeto e seus motivos
 ├── notebook/
 │   ├── 01_coleta.ipynb
 │   └── 02_limpeza.ipynb
-├── src/                      # funções reutilizáveis (em construção)
+├── src/
+│   └── limpeza.py            # funções de apoio usadas nos notebooks
+├── requirements.txt
 └── README.md
 ```
+
+Os arquivos CSV não estão no repositório: os dados originais devem ser baixados na fonte, e os processados são gerados ao executar os notebooks.
 
 ## Como executar
 
@@ -110,7 +115,7 @@ Crie e ative um ambiente virtual e instale as dependências (exemplo no Windows,
 ```bash
 python -m venv .venv
 .venv\Scripts\Activate.ps1
-pip install pandas numpy matplotlib seaborn ipykernel watermark
+pip install -r requirements.txt
 ```
 
 Em seguida, baixe o dataset RIASEC em [openpsychometrics.org/_rawdata](https://openpsychometrics.org/_rawdata/), extraia os arquivos `data.csv` e `codebook.txt` em `dados/Dados originais/` e execute os notebooks em ordem (`01_coleta` e depois `02_limpeza`), usando o kernel do ambiente virtual.
@@ -129,4 +134,4 @@ Python, pandas, NumPy, Matplotlib, Seaborn, Jupyter e expressões regulares. Nas
 
 ## Autor
 
-Gustavo. Projeto de portfólio em Ciência de Dados.
+Gustavo Salim. Projeto de portfólio em Ciência de Dados.

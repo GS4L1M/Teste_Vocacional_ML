@@ -1,0 +1,26 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Checkpoints do Jupyter
+.ipynb_checkpoints/
+
+# Dados
+# - originais: são de terceiros (Open Psychometrics) e devem ser baixados na fonte (ver README)
+# - processados: são gerados pelos notebooks
+dados/Dados originais/*.csv
+dados/Dados processados/*.csv
+
+# Arquivos de trava do LibreOffice/Excel
+.~lock.*
+~$*
+
+# Sistema operacional e editores
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
